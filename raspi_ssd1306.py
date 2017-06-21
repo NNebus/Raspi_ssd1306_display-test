@@ -4,16 +4,16 @@
 # raspi_ssd1306.py
 #------------------------------------------------------------
  
-# Einbindung der notwendigen Grundbibliotheken
+# Include necessary libs
 import os, sys, time, threading
  
-# Einbindung 0,96 Zoll OLED Display 128x64 Pixel
+# include  0.96"" OLED Display 128x64 Pixel
 import Adafruit_SSD1306
 from PIL import Image, ImageDraw, ImageFont
 
 
 
-# Display einrichten
+# Display-Config
  
 # Raspberry Pi pin configuration:
 RST = 24
@@ -43,7 +43,7 @@ draw.rectangle((0,0,width,height), outline=0, fill=0)
 
 
 # Load default font.
-font = ImageFont.load_default() # Wenn keine eigene Schrift vorhanden ist!!!! 
+font = ImageFont.load_default() # use this when no custom font is available 
 
 
 # Write one line of text.
